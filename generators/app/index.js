@@ -52,6 +52,14 @@ module.exports = class extends Generator {
       this.destinationPath(".travis.yml")
     );
     this.fs.copy(
+      this.templatePath("_.index.js"),
+      this.destinationPath("index.js")
+    );
+    this.fs.copy(
+      this.templatePath("_index.test.js"),
+      this.destinationPath("index.test.js")
+    );
+    this.fs.copy(
       this.templatePath("_package.json"),
       this.destinationPath("package.json")
     );
