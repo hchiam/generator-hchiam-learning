@@ -7,34 +7,37 @@ module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      yosay(
-        `Welcome to the ${chalk.red("generator-hchiam-learning")} generator!`
-      )
+      yosay(`Welcome to the ${chalk.red("hchiam-learning")} generator!`)
     );
 
-    // Example prompt:
-    // const prompts = [
-    //   {
-    //     type: 'confirm',
-    //     name: 'someAnswer',
-    //     message: 'Would you like to enable this option?',
-    //     default: true
-    //   }
-    // ];
-    // return this.prompt(prompts).then(props => {
-    //   // To access props later use this.props.someAnswer;
-    //   this.props = props;
-    // });
+    const prompts = [
+      {
+        type: "input",
+        name: "whatLearning",
+        message: "What are you learning?",
+        default: this.appname.replace("learning-", "") // Default to current folder name
+      },
+      {
+        type: "input",
+        name: "description",
+        message: "Project description?",
+        default: ""
+      },
+      {
+        type: "input",
+        name: "author",
+        message: "Author?",
+        default: this.user.git.name()
+      }
+    ];
+
+    return this.prompt(prompts).then(props => {
+      // To access props later use something like this.props.whatLearning;
+      this.props = props;
+    });
   }
 
   writing() {
-    // Example copyTpl with template instead of simple copy file:
-    // this.fs.copyTpl(
-    //   this.templatePath("_file.extension"),
-    //   this."estinationPath('file.extension'),"{
-    //     name: this.props.name // <%= name %> in the file
-    //   }
-    // );
     this.fs.copy(
       this.templatePath("_.eslintignore"), // Prefix with _ to avoid affecting this generator repo's scripts
       this.destinationPath(".eslintignore")
@@ -52,24 +55,35 @@ module.exports = class extends Generator {
       this.destinationPath(".travis.yml")
     );
     this.fs.copy(
-      this.templatePath("_.index.js"),
+      this.templatePath("_index.js"),
       this.destinationPath("index.js")
     );
     this.fs.copy(
       this.templatePath("_index.test.js"),
       this.destinationPath("index.test.js")
     );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath("_package.json"),
-      this.destinationPath("package.json")
+      this.destinationPath("package.json"),
+      {
+        whatLearning: this.props.whatLearning, // <%= whatLearning %> in the file
+        description: this.props.description,
+        author: this.props.author
+      }
     );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath("_README.md"),
-      this.destinationPath("README.md")
+      this.destinationPath("README.md"),
+      {
+        whatLearning: this.props.whatLearning, // <%= whatLearning %> in the file
+        description: this.props.description,
+        author: this.props.author
+      }
     );
   }
 
   install() {
+    this.spawnCommand("git", ["init"]);
     this.installDependencies();
   }
 };
