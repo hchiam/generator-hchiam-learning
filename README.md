@@ -8,6 +8,10 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 Key files: [`index.js`](https://github.com/hchiam/generator-hchiam-learning/blob/master/generators/app/index.js) and [`templates` folder](https://github.com/hchiam/generator-hchiam-learning/tree/master/generators/app/templates)
 
+## There's tons of generators you can use to get up and running faster
+
+Just use the searchbar: <https://yeoman.io/generators>
+
 ## Learn from
 
 * <https://yeoman.io/authoring>
