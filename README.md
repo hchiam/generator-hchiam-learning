@@ -1,12 +1,12 @@
 # `generator-hchiam-learning`
 
+[![NPM Download Stats](https://nodei.co/npm/generator-hchiam-learning.png?downloads=true)](https://www.npmjs.com/package/generator-hchiam-learning?activeTab=readme)
+
+A Yeoman generator to create another of my learning repos.
+
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-<https://www.npmjs.com/package/generator-hchiam-learning?activeTab=readme>
-
-Yeoman generator to create another of my learning repos.
-
-Learn from:
+## Learn from:
 
 * <https://yeoman.io/authoring>
 * <https://github.com/yeoman/generator-generator>
