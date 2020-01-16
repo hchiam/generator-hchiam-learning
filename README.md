@@ -27,11 +27,14 @@ npm install
 npm link
 cd ~/Desktop
 mkdir learning-something
+cd learning-something
 yo hchiam-learning
 ```
 
 ## Using generator-hchiam-learning
 
 ```bash
+mkdir learning-something
+cd learning-something
 yo hchiam-learning
 ```
