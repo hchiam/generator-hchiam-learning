@@ -1,8 +1,10 @@
-# generator-hchiam-learning
+# `generator-hchiam-learning`
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-Yeoman generator to create another of my learning repos
+<https://www.npmjs.com/package/generator-hchiam-learning>
+
+Yeoman generator to create another of my learning repos.
 
 Learn from:
 
@@ -11,7 +13,7 @@ Learn from:
 * <https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps>
 * <https://github.com/christiannwamba/generator-scotchmean/blob/master/generators/app/index.js>
 
-## Starting from scratch
+## Starting from scratch (not using this repo)
 
 ```bash
 npm install -g yo
@@ -19,6 +21,13 @@ npm install -g generator-generator
 mkdir generator-my-generator
 cd generator-my-generator
 yo generator
+# customize code and files
+npm link
+npm publish
+cd ~/Desktop
+mkdir some-repo
+cd some-repo
+yo my-generator
 ```
 
 ## Starting from this repo
@@ -27,16 +36,19 @@ yo generator
 git clone https://github.com/hchiam/generator-hchiam-learning.git
 cd generator-hchiam-learning
 npm install
+# customize code and files
 npm link
+npm publish
 cd ~/Desktop
 mkdir learning-something
 cd learning-something
 yo hchiam-learning
 ```
 
-## Using generator-hchiam-learning
+## Using `generator-hchiam-learning`
 
 ```bash
+npm install -g generator-hchiam-learning
 mkdir learning-something
 cd learning-something
 yo hchiam-learning
