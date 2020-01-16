@@ -21,7 +21,7 @@ npm install -g generator-generator
 mkdir generator-my-generator
 cd generator-my-generator
 yo generator
-# customize code and files
+# (customize code and files)
 npm link
 npm publish
 cd ~/Desktop
@@ -36,7 +36,7 @@ yo my-generator
 git clone https://github.com/hchiam/generator-hchiam-learning.git
 cd generator-hchiam-learning
 npm install
-# customize code and files
+# (customize code and files)
 npm link
 npm publish
 cd ~/Desktop
@@ -55,3 +55,9 @@ yo hchiam-learning
 ```
 
 You should get something like this template repo: <https://github.com/hchiam/learning-something>
+
+## Troubleshooting
+
+You can update to the current version by running the global install command again: `npm install -g generator-hchiam-learning`
+
+`npm link` has the side-effect of creating a folder like this: `/Users/<username>/.nvm/versions/node/v10.13.0/lib/node_modules/generator-hchiam-learning` (you might need to delete that folder if you get an error that references it when you try to run `npm install -g generator-hchiam-learning`)
