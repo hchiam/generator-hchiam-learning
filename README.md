@@ -8,16 +8,42 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 Key files: [`index.js`](https://github.com/hchiam/generator-hchiam-learning/blob/master/generators/app/index.js) and [`templates` folder](https://github.com/hchiam/generator-hchiam-learning/tree/master/generators/app/templates)
 
-## There's tons of generators you can use to get up and running faster
+## Using `generator-hchiam-learning`
+
+```bash
+npm install -g generator-hchiam-learning
+mkdir learning-something
+cd learning-something
+yo hchiam-learning
+```
+
+You might need to install Yeoman first: `npm install -g yo`. After running `yo hchiam-learning`, you should get something like this template repo: <https://github.com/hchiam/learning-something>
+
+## There's tons of other generators you can use to get up and running faster
 
 Just use the searchbar: <https://yeoman.io/generators>
 
-## Learn from
+## Learn to build your own
 
 * <https://yeoman.io/authoring>
 * <https://github.com/yeoman/generator-generator>
 * <https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps>
 * <https://github.com/christiannwamba/generator-scotchmean/blob/master/generators/app/index.js>
+
+## Starting from this repo
+
+```bash
+git clone https://github.com/hchiam/generator-hchiam-learning.git
+cd generator-hchiam-learning
+npm install
+# (customize code and files)
+npm link
+npm publish
+cd ~/Desktop
+mkdir learning-something
+cd learning-something
+yo hchiam-learning
+```
 
 ## Starting from scratch (not using this repo)
 
@@ -35,32 +61,6 @@ mkdir some-repo
 cd some-repo
 yo my-generator
 ```
-
-## Starting from this repo
-
-```bash
-git clone https://github.com/hchiam/generator-hchiam-learning.git
-cd generator-hchiam-learning
-npm install
-# (customize code and files)
-npm link
-npm publish
-cd ~/Desktop
-mkdir learning-something
-cd learning-something
-yo hchiam-learning
-```
-
-## Using `generator-hchiam-learning`
-
-```bash
-npm install -g generator-hchiam-learning
-mkdir learning-something
-cd learning-something
-yo hchiam-learning
-```
-
-You should get something like this template repo: <https://github.com/hchiam/learning-something>
 
 ## Troubleshooting
 
