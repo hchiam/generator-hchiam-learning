@@ -2,7 +2,7 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-<https://www.npmjs.com/package/generator-hchiam-learning>
+<https://www.npmjs.com/package/generator-hchiam-learning?activeTab=readme>
 
 Yeoman generator to create another of my learning repos.
 
