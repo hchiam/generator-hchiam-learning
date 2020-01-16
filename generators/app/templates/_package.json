@@ -7,7 +7,7 @@
     "start": "",
     "build": "",
     "test": "jest --passWithNoTests",
-    "lint": "eslint *.js",
+    "lint": "eslint *.js --max-warnings=0",
     "fix": "eslint --fix *.js"
   },
   "author": "<%= author %>",
@@ -20,7 +20,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint; npm test;"
+      "pre-commit": "npm run lint && npm test"
     }
   }
 }
