@@ -36,7 +36,7 @@ module.exports = class extends Generator {
     //   }
     // );
     this.fs.copy(
-      this.templatePath("_.eslintignore"),
+      this.templatePath("_.eslintignore"), // Prefix with _ to avoid affecting this generator repo's scripts
       this.destinationPath(".eslintignore")
     );
     this.fs.copy(
