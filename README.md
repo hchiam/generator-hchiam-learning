@@ -53,3 +53,5 @@ mkdir learning-something
 cd learning-something
 yo hchiam-learning
 ```
+
+You should get something like this template repo: <https://github.com/hchiam/learning-something>
