@@ -1,4 +1,7 @@
 # generator-hchiam-learning
+
+Just one of the things I'm learning. <https://github.com/hchiam/learning>
+
 Yeoman generator to create another of my learning repos
 
 Learn from:
