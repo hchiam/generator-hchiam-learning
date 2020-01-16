@@ -6,7 +6,7 @@ A Yeoman generator to create another of my [learning repos](https://github.com/h
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
-## Learn from:
+## Learn from
 
 * <https://yeoman.io/authoring>
 * <https://github.com/yeoman/generator-generator>
