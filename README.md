@@ -2,7 +2,7 @@
 
 [![NPM Download Stats](https://nodei.co/npm/generator-hchiam-learning.png?downloads=true)](https://www.npmjs.com/package/generator-hchiam-learning?activeTab=readme)
 
-A Yeoman generator to create another of my learning repos.
+A Yeoman generator to create another of my [learning repos](https://github.com/hchiam/learning-something).
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
