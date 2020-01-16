@@ -6,6 +6,8 @@ A Yeoman generator to create another of my [learning repos](https://github.com/h
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
+Key files: [`index.js`](https://github.com/hchiam/generator-hchiam-learning/blob/master/generators/app/index.js) and [`templates` folder](https://github.com/hchiam/generator-hchiam-learning/tree/master/generators/app/templates)
+
 ## Learn from
 
 * <https://yeoman.io/authoring>
