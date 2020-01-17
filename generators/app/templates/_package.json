@@ -1,5 +1,5 @@
 {
-  "name": "learning-<%= whatLearning %>",
+  "name": "learning-<%= whatLearning.replace(' ','-').toLowerCase() %>",
   "version": "1.0.0",
   "description": "<%= description %>",
   "main": "index.js",
