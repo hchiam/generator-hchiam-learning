@@ -15,7 +15,7 @@ module.exports = class extends Generator {
         type: "input",
         name: "whatLearning",
         message: "What are you learning?",
-        default: this.appname.replace("learning-", "") // Default to current folder name
+        default: this.appname.replace(/learning[ -]?/i, "") // Default to current folder name
       },
       {
         type: "input",
@@ -66,7 +66,9 @@ module.exports = class extends Generator {
       this.templatePath("_package.json"),
       this.destinationPath("package.json"),
       {
-        whatLearning: this.props.whatLearning, // <%= whatLearning %> in the file
+        whatLearningLink: this.props.whatLearning
+          .replace(/ /g, "-")
+          .toLowerCase(), // <%= whatLearningLink %> in the file
         description: this.props.description,
         author: this.props.author
       }
@@ -75,7 +77,22 @@ module.exports = class extends Generator {
       this.templatePath("_README.md"),
       this.destinationPath("README.md"),
       {
-        whatLearning: this.props.whatLearning, // <%= whatLearning %> in the file
+        whatLearningName: this.props.whatLearning, // <%= whatLearningName %> in the file
+        whatLearningLink: this.props.whatLearning
+          .replace(/ /g, "-")
+          .toLowerCase(),
+        description: this.props.description,
+        author: this.props.author
+      }
+    );
+    this.fs.copyTpl(
+      this.templatePath("_your_first_commit.sh"),
+      this.destinationPath("your_first_commit.sh"),
+      {
+        whatLearningName: this.props.whatLearning,
+        whatLearningLink: this.props.whatLearning
+          .replace(/ /g, "-")
+          .toLowerCase(),
         description: this.props.description,
         author: this.props.author
       }
@@ -84,6 +101,20 @@ module.exports = class extends Generator {
 
   install() {
     this.spawnCommand("git", ["init"]);
-    this.installDependencies();
+    // This.installDependencies();
+  }
+
+  end() {
+    this.log(
+      "\n--------------------\n--------------------\n--------------------" +
+        "\nYou can run " +
+        chalk.bold.yellow("bash your_first_commit.sh") +
+        " to add the project to your GitHub:\n" +
+        "https://github.com/" +
+        this.props.author +
+        "/learning-" +
+        this.props.whatLearning.replace(/ /g, "-").toLowerCase() +
+        "\n"
+    );
   }
 };
