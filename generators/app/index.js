@@ -2,12 +2,19 @@
 const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
+const path = require("path");
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
+    const versionNumber = this.fs.readJSON(
+      path.join(__dirname, "../..", "package.json")
+    ).version;
     this.log(
-      yosay(`Welcome to the ${chalk.red("hchiam-learning")} generator!`)
+      yosay(
+        `Welcome to the ${chalk.red(
+          "hchiam-learning"
+        )} generator ${versionNumber}`
+      )
     );
 
     const prompts = [
@@ -101,7 +108,7 @@ module.exports = class extends Generator {
 
   install() {
     this.spawnCommand("git", ["init"]);
-    // This.installDependencies();
+    this.installDependencies();
   }
 
   end() {
