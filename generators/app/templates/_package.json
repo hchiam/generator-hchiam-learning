@@ -1,6 +1,7 @@
 {
   "name": "learning-<%= whatLearningLink %>",
   "version": "1.0.0",
+  "private": true,
   "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
