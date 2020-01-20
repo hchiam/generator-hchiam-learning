@@ -45,6 +45,7 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    this.fs.copy(this.templatePath("src"), this.destinationPath("src"));
     this.fs.copy(
       this.templatePath("_.eslintignore"), // Prefix with _ to avoid affecting this generator repo's scripts
       this.destinationPath(".eslintignore")
@@ -60,14 +61,6 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath("_.travis.yml"),
       this.destinationPath(".travis.yml")
-    );
-    this.fs.copy(
-      this.templatePath("_index.js"),
-      this.destinationPath("index.js")
-    );
-    this.fs.copy(
-      this.templatePath("_index.test.js"),
-      this.destinationPath("index.test.js")
     );
     this.fs.copyTpl(
       this.templatePath("_package.json"),
@@ -91,6 +84,10 @@ module.exports = class extends Generator {
         description: this.props.description,
         author: this.props.author
       }
+    );
+    this.fs.copy(
+      this.templatePath("_show_dep_graph.sh"),
+      this.destinationPath("show_dep_graph.sh")
     );
     this.fs.copyTpl(
       this.templatePath("_your_first_commit.sh"),
