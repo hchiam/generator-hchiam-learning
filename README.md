@@ -62,6 +62,16 @@ cd some-repo
 yo my-generator
 ```
 
+## If you want to create a generator for a private project
+
+You can avoid accidentally publishing to npm. Just add this field to your `package.json`:
+
+```json
+"private": true
+```
+
+More info in the [npm docs](https://docs.npmjs.com/files/package.json#private).
+
 ## Troubleshooting
 
 You can update to the current version by running the global install command again: `npm install -g generator-hchiam-learning`
