@@ -1,6 +1,6 @@
 # `generator-hchiam-learning`
 
-[![NPM Download Stats](https://nodei.co/npm/generator-hchiam-learning.png?downloads=true)](https://www.npmjs.com/package/generator-hchiam-learning)
+[![NPM Download Stats](https://nodei.co/npm/generator-hchiam-learning.png?downloads=true)](https://www.npmjs.com/package/generator-hchiam-learning) [![HitCount](http://hits.dwyl.com/hchiam/generator-hchiam-learning.svg)](http://hits.dwyl.com/hchiam/generator-hchiam-learning)
 
 A Yeoman generator to create another of my [learning repos](https://github.com/hchiam/learning-something).
 
