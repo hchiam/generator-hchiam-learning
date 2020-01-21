@@ -64,7 +64,7 @@ yo my-generator
 
 ## If you want to create a generator for a private project
 
-You can avoid accidentally publishing to npm. Just add this field to your `package.json`:
+You can avoid accidentally publishing to npm. This field is set by default in the generated `package.json`:
 
 ```json
 "private": true
