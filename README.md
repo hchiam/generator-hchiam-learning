@@ -17,7 +17,7 @@ cd learning-something
 yo hchiam-learning
 ```
 
-You might need to install Yeoman first: `npm install -g yo`. After running `yo hchiam-learning`, you should get something like this template repo: <https://github.com/hchiam/learning-something>
+You might need to install [Node.JS](https://nodejs.org) and Yeoman first: `npm install -g yo`. After running `yo hchiam-learning`, you should get something like this template repo: <https://github.com/hchiam/learning-something>
 
 ## There's tons of other generators you can use to get up and running faster
 
