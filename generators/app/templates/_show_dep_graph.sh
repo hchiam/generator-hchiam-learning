@@ -5,7 +5,7 @@ function askForMaxDepth() {
 function installDotIfMissing() {
   if ! [ -x "$(command -v dot)" ]; then
     echo 'Error: dot graphviz is not set up or installed. Attempting install now.'
-    command -v eslint
+    brew install graphviz
   fi
 }
 
