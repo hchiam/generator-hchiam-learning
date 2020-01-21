@@ -14,11 +14,17 @@ function getSrcFolder() {
 }
 
 function createDependencyGraph() {
-  depcruise --max-depth $maxDepth --exclude "^node_modules" --output-type dot $srcFolder | dot -T svg > dependencygraph.svg
-  echo 'Open dependencygraph.svg in a browser/viewer.'
+  re='^[0-9]+$'
+  if ! [[ $maxDepth =~ $re ]] ; then
+    # don't use maxDepth if it's not a number
+    depcruise --exclude "^node_modules" --output-type dot $srcFolder | dot -T svg > dependencygraph.svg
+  else
+    depcruise --max-depth $maxDepth --exclude "^node_modules" --output-type dot $srcFolder | dot -T svg > dependencygraph.svg
+  fi
 }
 
 function showDependencyGraph() {
+  echo 'Trying to open dependencygraph.svg in a browser.'
   # try to open in Firefox or Chrome
   open -a "Firefox" dependencygraph.svg || \
   open -a "Google Chrome" dependencygraph.svg || true
