@@ -72,6 +72,23 @@ You can avoid accidentally publishing to npm. This field is set by default in th
 
 More info in the [npm docs](https://docs.npmjs.com/files/package.json#private).
 
+## Some interesting scripts to consider
+
+```json
+{
+  ...
+  "scripts": {
+    "start": "open build/index.html",
+    "build": "babel src/index.js --out-file build/index.js; parcel build src/index.html --out-dir build --no-source-maps --no-cache; rm -rf dist; rm build/src.*.js",
+    "test": "jest --passWithNoTests",
+    "lint": "eslint src/*.js --max-warnings=0",
+    "fix": "eslint --fix src/*.js",
+    "fast": "nodemon -e js,html -w src -x 'npm run lint; npm run test; npm run build; npm run start;'"
+  },
+  ...
+}
+```
+
 ## Troubleshooting
 
 You can update to the current version by running the global install command again: `npm install -g generator-hchiam-learning`
