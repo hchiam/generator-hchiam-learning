@@ -18,6 +18,8 @@ function solutionWrapper(...parameters) {
 //   this.left = this.right = null;
 // }
 
-module.exports = {
-  solutionWrapper,
-};
+if (typeof module !== 'undefined') {
+  module.exports = {
+    solutionWrapper,
+  };
+}

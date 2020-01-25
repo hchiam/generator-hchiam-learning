@@ -11,8 +11,10 @@ describe("generator-hchiam-learning:app", () => {
   });
 
   it("creates files", () => {
+    assert.file(["src/index.html"]);
     assert.file(["src/index.js"]);
     assert.file(["src/index.test.js"]);
+    assert.file(["src/style.css"]);
     assert.file([".eslintignore"]);
     assert.file([".eslintrc.js"]);
     assert.file([".gitignore"]);

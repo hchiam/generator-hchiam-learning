@@ -5,7 +5,7 @@
   "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "open src/index.html",
     "build": "",
     "test": "jest --passWithNoTests",
     "lint": "eslint src/*.js --max-warnings=0",
