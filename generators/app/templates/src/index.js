@@ -23,3 +23,5 @@ if (typeof module !== 'undefined') {
     solutionWrapper,
   };
 }
+
+alert('Hi! :)');
