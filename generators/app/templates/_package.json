@@ -21,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm test"
+      "pre-commit": "npm run lint && npm test; echo; echo 'Reminders: Did you build first? Do you need to [skip ci]?'; echo;"
     }
   }
 }
