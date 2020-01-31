@@ -2,3 +2,7 @@ node_modules
 coverage
 
 your_first_commit.sh
+
+# This file was created using the Yeoman generator
+#  generator-hchiam-learning:
+#  https://www.npmjs.com/package/generator-hchiam-learning

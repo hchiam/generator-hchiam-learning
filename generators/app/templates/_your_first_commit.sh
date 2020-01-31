@@ -9,3 +9,7 @@ git remote set-url origin https://github.com/<%= author %>/learning-<%= whatLear
 git push --set-upstream origin master
 echo; echo -------; echo;
 git status
+
+# This file was created using the Yeoman generator
+#  generator-hchiam-learning:
+#  https://www.npmjs.com/package/generator-hchiam-learning
