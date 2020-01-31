@@ -41,6 +41,6 @@ fi
 createDependencyGraph
 showDependencyGraph
 
-# This file was created using the Yeoman generator
+# This file was first created using the Yeoman generator
 #  generator-hchiam-learning:
 #  https://www.npmjs.com/package/generator-hchiam-learning
