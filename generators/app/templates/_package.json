@@ -9,7 +9,8 @@
     "build": "",
     "test": "jest --passWithNoTests",
     "lint": "eslint src/*.js --max-warnings=0",
-    "fix": "eslint --fix src/*.js"
+    "fix": "eslint --fix src/*.js",
+    "reminder": "echo; echo -e 'Reminders: Did you do \\033[1;34mnpm run my-build\\033[0m first? \nDo you need to \\033[1;34m[skip ci]\\033[0m?'; echo;"
   },
   "author": "<%= author %>",
   "license": "MIT",
@@ -21,7 +22,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm test; echo; echo 'Reminders: Did you build first? Do you need to [skip ci]?'; echo;"
+      "pre-commit": "npm run reminder; npm run lint && npm test; npm run reminder;"
     }
   }
 }
