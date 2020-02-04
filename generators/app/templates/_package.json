@@ -5,7 +5,7 @@
   "description": "<%= description %> (This file was first created using the Yeoman generator generator-hchiam-learning: https://www.npmjs.com/package/generator-hchiam-learning",
   "main": "src/index.js",
   "scripts": {
-    "start": "open src/index.html",
+    "start": "open src/index.html & open http://localhost:8000",
     "build": "",
     "test": "jest --passWithNoTests",
     "lint": "eslint src/*.js --max-warnings=0",
