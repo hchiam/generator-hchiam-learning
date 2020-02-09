@@ -86,6 +86,10 @@ module.exports = class extends Generator {
       }
     );
     this.fs.copy(
+      this.templatePath("_publish_live_site.sh"),
+      this.destinationPath("publish_live_site.sh")
+    );
+    this.fs.copy(
       this.templatePath("_show_dep_graph.sh"),
       this.destinationPath("show_dep_graph.sh")
     );
