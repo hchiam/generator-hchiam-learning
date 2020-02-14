@@ -11,7 +11,8 @@
     "lint": "eslint src/*.js --max-warnings=0",
     "fix": "eslint --fix src/*.js",
     "reminder": "echo; echo -e 'Reminders: Did you do \\033[1;34mnpm run build\\033[0m first? \nDo you need to \\033[1;34m[skip ci]\\033[0m?'; echo;",
-    "surge": "bash publish_live_site.sh"
+    "surge": "bash publish_live_site.sh",
+    "zip": "zip -r ${PWD##*/}.zip * .eslintignore .eslintrc.js .gitignore .travis.yml -x \"node_modules/*\"; echo; echo \"created ${PWD##*/}.zip inside this folder\"; echo;"
   },
   "author": "<%= author %>",
   "license": "MIT",

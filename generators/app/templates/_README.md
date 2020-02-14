@@ -8,4 +8,6 @@ You can generate a [dependency graph](https://github.com/hchiam/learning-depende
 
 You can publish a live site to [surge](https://github.com/hchiam/learning-surge) with `bash publish_live_site.sh` (Just go into the relevant enclosing `src` or `public` folder of your site files - a CNAME file is there for convenience).
 
+You can zip the current folder with `npm run zip`.
+
 This file was first created using the Yeoman generator [`generator-hchiam-learning`](https://www.npmjs.com/package/generator-hchiam-learning).
