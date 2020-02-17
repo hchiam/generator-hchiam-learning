@@ -45,6 +45,7 @@ module.exports = class extends Generator {
   }
 
   writing() {
+    this.fs.copy(this.templatePath("cypress"), this.destinationPath("cypress"));
     this.fs.copy(this.templatePath("src"), this.destinationPath("src"));
     this.fs.copy(
       this.templatePath("_.eslintignore"), // Prefix with _ to avoid affecting this generator repo's scripts
@@ -61,6 +62,10 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath("_.travis.yml"),
       this.destinationPath(".travis.yml")
+    );
+    this.fs.copy(
+      this.templatePath("_cypress.json"),
+      this.destinationPath("cypress.json")
     );
     this.fs.copy(
       this.templatePath("_lighthouserc.json"),

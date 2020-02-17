@@ -7,7 +7,7 @@
   "scripts": {
     "start": "rm -rf dist || true; parcel src/index.html --out-dir dist --cache-dir .cache --open; # react-scripts start;",
     "build": "rm -rf dist || true; parcel build src/index.html --out-dir dist --cache-dir .cache --no-source-maps; # react-scripts build;",
-    "test": "jest --passWithNoTests; # react-scripts test;",
+    "test": "cypress run; jest --passWithNoTests; # CI=true react-scripts test;",
     "lint": "eslint src/*.js src/**/*.js --max-warnings=0",
     "fix": "eslint --fix src/*.js src/**/*.js",
     "reminder": "echo; echo 'Reminders: \n\nDid you do \\033[1;34mnpm run build\\033[0m first? \nDo you need to \\033[1;34m[skip ci]\\033[0m?'; echo;",

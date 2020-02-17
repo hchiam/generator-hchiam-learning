@@ -24,7 +24,9 @@ if (typeof module !== 'undefined') {
   };
 }
 
-alert('Hi! :)');
+if (alert) {
+  alert('Hi! :)');
+}
 
 /**
  * This file was first created using the Yeoman generator
