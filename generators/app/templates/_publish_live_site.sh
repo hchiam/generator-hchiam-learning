@@ -17,15 +17,15 @@ function openInChrome() {
 
 installSurgeIfMissing
 
-read -p "Use default $folderToUse folder for surge deploy? " useSrcFolder
+read -p "Use default $folderToUse folder for surge deploy? " useDefaults
 
 # keep asking until given a response
-while [ -z "$useSrcFolder" ]; do
-  read -p "Use default $folderToUse folder for surge deploy? " useSrcFolder
+while [ -z "$useDefaults" ]; do
+  read -p "Use default $folderToUse folder for surge deploy to $surgePageToPublishTo? " useDefaults
 done
 
 re='(y|Y)(es|up|eah)?'
-if [[ $useSrcFolder =~ $re ]]; then
+if [[ $useDefaults =~ $re ]]; then
   echo "I'll take that as a yes. :)"
   echo "Publishing to $surgePageToPublishTo"
   publishToSurge
