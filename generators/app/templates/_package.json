@@ -11,8 +11,10 @@
     "lint": "eslint src/*.js src/**/*.js --max-warnings=0",
     "fix": "eslint --fix src/*.js src/**/*.js",
     "reminder": "echo; echo 'Reminders: \n\nDid you do \\033[1;34mnpm run build\\033[0m first? \nDo you need to \\033[1;34m[skip ci]\\033[0m?'; echo;",
-    "surge": "bash publish_live_site.sh",
+    "deps": "bash show_dep_graph.sh",
+    "cypress": "cypress open",
     "lighthouse": "printf '\nPlease wait 10 seconds for the browser to open automatically and test the production version built to dist.\n\n'; npx serve dist & (sleep 10; lighthouse http://localhost:5000; open *.report.html; killall node;)",
+    "surge": "bash publish_live_site.sh",
     "zip": "zip -r ${PWD##*/}.zip * .eslintignore .eslintrc.js .gitignore .travis.yml -x \"node_modules/*\"; echo; echo \"created ${PWD##*/}.zip inside this folder\"; echo;"
   },
   "author": "<%= author %>",
@@ -20,6 +22,7 @@
   "dependencies": {},
   "devDependencies": {
     "@lhci/cli": "^0.3.8",
+    "cypress": "^4.0.2",
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.18.3",
