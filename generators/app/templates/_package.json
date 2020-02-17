@@ -32,6 +32,9 @@
     "parcel-bundler": "^1.12.4",
     "react-scripts": "^3.4.0"
   },
+  "jest": {
+    "testPathIgnorePatterns": ["<rootDir>/cypress"]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run reminder; CI=true npm test; CI=true npm run fix; npm run reminder;"

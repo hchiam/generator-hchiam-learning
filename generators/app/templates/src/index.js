@@ -24,10 +24,6 @@ if (typeof module !== 'undefined') {
   };
 }
 
-if (alert) {
-  alert('Hi! :)');
-}
-
 /**
  * This file was first created using the Yeoman generator
  * generator-hchiam-learning:
