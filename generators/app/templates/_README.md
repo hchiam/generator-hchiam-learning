@@ -6,6 +6,8 @@ Just one of the things I'm learning. <https://github.com/<%= author %>/learning>
 
 You can generate a [dependency graph](https://github.com/hchiam/learning-dependency-cruiser) with `bash show_dep_graph.sh`.
 
+You can get a report on accessibility, best practices, etc. with `npm run lighthouse` (see [example usage notes](https://github.com/hchiam/learning-lighthouse-ci) for more info on `lighthouse`, or `@lhci/cli` for more advanced CLI stuff).
+
 You can publish a live site to [surge](https://github.com/hchiam/learning-surge) with `bash publish_live_site.sh` (Just go into the relevant enclosing `src` or `public` folder of your site files - a CNAME file is there for convenience).
 
 You can zip the current folder with `npm run zip`.

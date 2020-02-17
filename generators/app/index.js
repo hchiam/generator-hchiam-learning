@@ -62,6 +62,10 @@ module.exports = class extends Generator {
       this.templatePath("_.travis.yml"),
       this.destinationPath(".travis.yml")
     );
+    this.fs.copy(
+      this.templatePath("_lighthouserc.json"),
+      this.destinationPath("lighthouserc.json")
+    );
     this.fs.copyTpl(
       this.templatePath("_package.json"),
       this.destinationPath("package.json"),
