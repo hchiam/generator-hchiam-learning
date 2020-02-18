@@ -38,9 +38,8 @@
     "yosay": "^2.0.1"
   },
   "jest": {
-    "testEnvironment": "node",
     "testPathIgnorePatterns": [
-      "generators/"
+      "<rootDir>/generators/app/templates/"
     ]
   },
   "lint-staged": {
