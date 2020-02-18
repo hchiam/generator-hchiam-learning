@@ -17,7 +17,7 @@ function openInChrome() {
 
 installSurgeIfMissing
 
-read -p "Use default $folderToUse folder for surge deploy? " useDefaults
+read -p "Use default $folderToUse folder for surge deploy to $surgePageToPublishTo? " useDefaults
 
 # keep asking until given a response
 while [ -z "$useDefaults" ]; do
