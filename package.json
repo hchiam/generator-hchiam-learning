@@ -54,7 +54,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged; npm test; echo; echo 'Reminder: did you update the version?'; echo;"
+      "pre-commit": "lint-staged; npm test; echo; echo 'Reminder: did you update the \\033[1;34mversion\\033[0m?'; echo;"
     }
   },
   "eslintConfig": {
