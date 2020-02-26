@@ -12,7 +12,7 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         `Welcome to the ${chalk.red(
-          "hchiam-learning"
+          "hchiam-learning:mini"
         )} generator ${versionNumber}`
       )
     );
@@ -45,7 +45,6 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(this.templatePath("cypress"), this.destinationPath("cypress"));
     this.fs.copy(this.templatePath("src"), this.destinationPath("src"));
     this.fs.copy(
       this.templatePath("_.eslintignore"), // Prefix with _ to avoid affecting this generator repo's scripts
@@ -59,18 +58,6 @@ module.exports = class extends Generator {
       this.templatePath("_.gitignore"),
       this.destinationPath(".gitignore")
     );
-    this.fs.copy(
-      this.templatePath("_.travis.yml"),
-      this.destinationPath(".travis.yml")
-    );
-    this.fs.copy(
-      this.templatePath("_cypress.json"),
-      this.destinationPath("cypress.json")
-    );
-    this.fs.copy(
-      this.templatePath("_lighthouserc.json"),
-      this.destinationPath("lighthouserc.json")
-    );
     this.fs.copyTpl(
       this.templatePath("_package.json"),
       this.destinationPath("package.json"),
@@ -81,6 +68,10 @@ module.exports = class extends Generator {
         description: this.props.description,
         author: this.props.author
       }
+    );
+    this.fs.copy(
+      this.templatePath("_publish_live_site.sh"),
+      this.destinationPath("publish_live_site.sh")
     );
     this.fs.copyTpl(
       this.templatePath("_README.md"),
@@ -93,10 +84,6 @@ module.exports = class extends Generator {
         description: this.props.description,
         author: this.props.author
       }
-    );
-    this.fs.copy(
-      this.templatePath("_publish_live_site.sh"),
-      this.destinationPath("publish_live_site.sh")
     );
     this.fs.copy(
       this.templatePath("_show_dep_graph.sh"),

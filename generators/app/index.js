@@ -82,6 +82,10 @@ module.exports = class extends Generator {
         author: this.props.author
       }
     );
+    this.fs.copy(
+      this.templatePath("_publish_live_site.sh"),
+      this.destinationPath("publish_live_site.sh")
+    );
     this.fs.copyTpl(
       this.templatePath("_README.md"),
       this.destinationPath("README.md"),
@@ -93,10 +97,6 @@ module.exports = class extends Generator {
         description: this.props.description,
         author: this.props.author
       }
-    );
-    this.fs.copy(
-      this.templatePath("_publish_live_site.sh"),
-      this.destinationPath("publish_live_site.sh")
     );
     this.fs.copy(
       this.templatePath("_show_dep_graph.sh"),
