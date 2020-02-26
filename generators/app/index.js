@@ -3,6 +3,7 @@ const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
 const path = require("path");
+const commandExists = require("command-exists").sync;
 
 module.exports = class extends Generator {
   prompting() {
@@ -118,7 +119,12 @@ module.exports = class extends Generator {
 
   install() {
     this.spawnCommand("git", ["init"]);
-    this.installDependencies();
+    const hasYarn = commandExists("yarn");
+    this.installDependencies({
+      npm: !hasYarn,
+      bower: false,
+      yarn: hasYarn
+    });
   }
 
   end() {
