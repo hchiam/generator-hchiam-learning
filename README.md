@@ -97,6 +97,8 @@ More info in the [npm docs](https://docs.npmjs.com/files/package.json#private).
 }
 ```
 
+Also consider using Cucumber Gherkin to connect "plain English" feature files to Cypress tests. Simple example: <https://github.com/hchiam/learning-cypress/tree/master/cucumber#tutorial-to-try-out-combining-cucumberjs-and-cypress>
+
 ## Troubleshooting
 
 You can update to the current version by running the global install command again: `npm install -g generator-hchiam-learning`
