@@ -1,4 +1,4 @@
-folderToUse=src
+folderToUse=dist
 surgePageToPublishTo=https://hchiam-test.surge.sh
 
 function installSurgeIfMissing() {
