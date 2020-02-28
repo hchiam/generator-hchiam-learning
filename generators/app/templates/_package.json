@@ -8,7 +8,7 @@
     "start": "rm -rf dist || true; npm run build:css; parcel src/index.html --out-dir dist --cache-dir .cache --open; # react-scripts start;",
     "stop": "killall node",
     "build": "rm -rf dist || true; npm run build:css; parcel build src/index.html --out-dir dist --cache-dir .cache --no-source-maps; # react-scripts build;",
-    "build:css": "printf '\nPlease wait a few 5 seconds for postcss to optimize your CSS.\n'; postcss ./src/style.css -o ./src/style-postcss.css",
+    "build:css": "printf '\nPlease wait a few seconds for postcss to optimize your CSS.\n'; postcss ./src/style.css -o ./src/style-postcss.css",
     "watch": "watch \"npm run build:css\" ./src",
     "test": "npm run start & (if (cypress run); then echo 'Now running Jest tests:' && jest --passWithNoTests && npm run reminder:stop; else npm run reminder:stop && exit 1; fi;); # CI=true react-scripts test;",
     "lint": "eslint src/*.js src/**/*.js --max-warnings=0",
