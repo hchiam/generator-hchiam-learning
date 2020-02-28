@@ -84,6 +84,10 @@ module.exports = class extends Generator {
       }
     );
     this.fs.copy(
+      this.templatePath("_postcss.config.js"),
+      this.destinationPath("postcss.config.js")
+    );
+    this.fs.copy(
       this.templatePath("_publish_live_site.sh"),
       this.destinationPath("publish_live_site.sh")
     );
@@ -102,6 +106,10 @@ module.exports = class extends Generator {
     this.fs.copy(
       this.templatePath("_show_dep_graph.sh"),
       this.destinationPath("show_dep_graph.sh")
+    );
+    this.fs.copy(
+      this.templatePath("_tailwind.js"),
+      this.destinationPath("tailwind.js")
     );
     this.fs.copyTpl(
       this.templatePath("_your_first_commit.sh"),

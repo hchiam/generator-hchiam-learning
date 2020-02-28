@@ -5,9 +5,11 @@
   "description": "<%= description %> (This file was first created using the Yeoman generator generator-hchiam-learning: https://www.npmjs.com/package/generator-hchiam-learning)",
   "main": "src/index.js",
   "scripts": {
-    "start": "rm -rf dist || true; parcel src/index.html --out-dir dist --cache-dir .cache --open; # react-scripts start;",
+    "start": "rm -rf dist || true; npm run build:css; parcel src/index.html --out-dir dist --cache-dir .cache --open; # react-scripts start;",
     "stop": "killall node",
-    "build": "rm -rf dist || true; parcel build src/index.html --out-dir dist --cache-dir .cache --no-source-maps; # react-scripts build;",
+    "build": "rm -rf dist || true; npm run build:css; parcel build src/index.html --out-dir dist --cache-dir .cache --no-source-maps; # react-scripts build;",
+    "build:css": "printf '\nPlease wait a few 5 seconds for postcss to optimize your CSS.\n'; postcss ./src/style.css -o ./src/style-postcss.css",
+    "watch": "watch \"npm run build:css\" ./src",
     "test": "npm run start & (if (cypress run); then echo 'Now running Jest tests:' && jest --passWithNoTests && npm run reminder:stop; else npm run reminder:stop && exit 1; fi;); # CI=true react-scripts test;",
     "lint": "eslint src/*.js src/**/*.js --max-warnings=0",
     "fix": "eslint --fix src/*.js src/**/*.js --max-warnings=0",
@@ -23,7 +25,10 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "@lhci/cli": "^0.3.8",
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
     "cypress": "^4.0.2",
     "cypress-plugin-snapshots": "^1.2.9",
     "eslint": "^6.8.0",
@@ -33,7 +38,11 @@
     "jest-cli": "^24.9.0",
     "lighthouse": "^5.6.0",
     "parcel-bundler": "^1.12.4",
-    "react-scripts": "^3.4.0"
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "react-scripts": "^3.4.0",
+    "tailwindcss": "^1.2.0",
+    "watch": "^1.0.2"
   },
   "jest": {
     "testPathIgnorePatterns": ["<rootDir>/cypress"]

@@ -1,3 +1,8 @@
+/* CSS will gloss over, but Tailwind will process: */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   background: rgb(32,32,32);
   color: whitesmoke;
