@@ -102,3 +102,7 @@ Also consider using Cucumber Gherkin to connect "plain English" feature files to
 You can update to the current version by running the global install command again: `npm install -g generator-hchiam-learning`
 
 `npm link` has the side-effect of creating a folder like this: `/Users/<username>/.nvm/versions/node/v10.13.0/lib/node_modules/generator-hchiam-learning` (you might need to delete that folder if you get an error that references it when you try to run `npm install -g generator-hchiam-learning`)
+
+## A simpler alternative
+
+https://github.com/hchiam/learning-template
