@@ -1,5 +1,5 @@
 {
-  "name": "@hchiam/generator-hchiam-learning",
+  "name": "generator-hchiam-learning",
   "version": "8.0.3",
   "description": "Yeoman generator to create another of my learning repos",
   "homepage": "https://github.com/hchiam/generator-hchiam-learning",
@@ -79,8 +79,5 @@
     "test": "jest"
   },
   "repository": "https://github.com/hchiam/generator-hchiam-learning.git",
-  "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "license": "MIT"
 }
